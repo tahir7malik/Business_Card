@@ -13,7 +13,10 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Phone
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.outlined.Email
 import androidx.compose.material.icons.outlined.Favorite
 import androidx.compose.material.icons.outlined.Phone
@@ -27,6 +30,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -45,10 +49,10 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Business_Card(
                         name = "Jennifer Doe",
-                        designation = "Android Developer",
-                        phone = "+91 657 838 3215",
-                        username = "@android_dev_jennifer",
-                        mail = "jennifer7doe@gmail.com"
+                        designation = "Android Developer Extraordinaire",
+                        phone = "+11 (123) 444 555 666",
+                        username = "@androidDev",
+                        mail = "jen.doe@android.com"
                     )
                 }
             }
@@ -110,7 +114,9 @@ fun Business_Card(name: String, designation: String, phone: String, username: St
                         content = {
                             Text(
                                 text = designation,
-                                fontSize = 20.sp
+                                fontSize = 20.sp,
+                                fontWeight = FontWeight.W800,
+                                color = Color(rgb(0, 109, 59))
                             )
                         }
                     )
@@ -122,10 +128,10 @@ fun Business_Card(name: String, designation: String, phone: String, username: St
                     Row( // Third Column: 1 row
                         content = {
                             Icon(
-                                imageVector = Icons.Outlined.Phone,
+                                imageVector = Icons.Filled.Phone,
                                 contentDescription = "Phone",
                                 modifier = Modifier.size(20.dp),
-                                tint = Color.Black
+                                tint = Color(rgb(0, 109, 59))
                             )
                             Text(text = "   ") // For creating space between icon & text
                             Text(
@@ -137,10 +143,10 @@ fun Business_Card(name: String, designation: String, phone: String, username: St
                     Row( // Third Column: 3 row
                         content = {
                             Icon(
-                                imageVector = Icons.Outlined.Share,
+                                imageVector = Icons.Filled.Share,
                                 contentDescription = "Share",
                                 modifier = Modifier.size(20.dp),
-                                tint = Color.Black
+                                tint = Color(rgb(0, 109, 59))
                             )
                             Text(text = "   ") // For creating space between icon & text
                             Text(
@@ -152,10 +158,10 @@ fun Business_Card(name: String, designation: String, phone: String, username: St
                     Row( // Third Column: 5 row
                         content = {
                             Icon(
-                                imageVector = Icons.Outlined.Email,
+                                imageVector = Icons.Filled.Email,
                                 contentDescription = "Email",
                                 modifier = Modifier.size(20.dp),
-                                tint = Color.Black
+                                tint = Color(rgb(0, 109, 59))
                             )
                             Text(text = "   ") // For creating space between icon & text
                             Text(
